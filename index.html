@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+<meta chrset="utf-8"/>
+<title>konwerter walut</title>
+<script type="text/javascript">
+
+
+
+function wyliczanie(){
+var m = document.getElementById("m").value
+
+var n
+n=m*4.20;
+
+document.getElementById("euro").innerHTML = 
+		 n;
+
+
+}
+function wyliczanie1(){
+var m = document.getElementById("m").value
+
+var k
+k=m*3.5;
+
+document.getElementById("usd").innerHTML = 
+		 k;
+
+
+}
+
+
+function czyszczenie1(){
+		document.getElementById("m").value=0
+		document.getElementById("euro").innerHTML = 0;
+		document.getElementById("usd").innerHTML = 0;
+		
+}
+
+	
+</script>
+</head>
+<body bgcolor="blue">
+<center> <font size="10"> Konwerter walut.</font></center><br/><br/>
+<h1>Podaj ilość złotych</h1>
+
+<input type="text" value="0" size="3" id="m"/> pln </br></br></br>
+
+
+
+<br/>
+<br/>
+<input type="button" value="Wylicz wartość w euro" onclick="wyliczanie()"/>
+<h1><div id="euro"></div> </h1>
+<input type="button" value="Wylicz wartość w usd" onclick="wyliczanie1()"/>
+
+<h1><div id="usd"></div> </h1>
+<input type="button" value="Wyczysc" onclick="czyszczenie1()"/>
+
+</body>
+</html>
